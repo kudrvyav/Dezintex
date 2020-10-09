@@ -1,0 +1,364 @@
+html, * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: none !important;
+    backface-visibility: hidden;
+}
+
+body {
+    position: relative;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    flex-direction: column;
+    font-family: 'Inter', sans-serif;
+    justify-content: center;
+    height: 100%;
+    background: url(img/bg.png) no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+.container {
+    max-width: 1166px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+.logo::after {
+    display: flex;
+    position: absolute;
+    content: '';
+    width: 306px;
+    height: 80px;
+    border-radius: 50%;
+    background: #ffffff;
+    filter: blur(15px);
+    left: -50px;
+    top: -8px;
+    z-index: -1;
+}
+
+.logo {
+    margin-bottom: 23px;
+    position: relative;
+}
+
+.main-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.main-info {
+    flex-basis: 60%;
+}
+
+.info-title {
+    font-style: normal;
+    font-weight: 900;
+    font-size: 56px;
+    line-height: 68px;
+    text-transform: uppercase;
+    color: #118976;
+    text-shadow: 2px 2px 0px #FFFFFF;
+    margin-bottom: 61px;
+}
+
+.info-lists {
+    display: flex;
+    flex-direction: column;
+}
+
+.info-list {
+    background: url(img/Exclude.svg) no-repeat left center;
+    max-width: 353px;
+    padding-left: 76px;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 28px;
+    display: flex;
+    align-items: center;
+    color: #333333;
+}
+
+.info-list:not(:last-child) {
+    margin-bottom: 48px;
+}
+
+.info-body {
+    display: flex;
+    justify-content: space-between;
+}
+
+.info-body img {
+    margin-top: -109px;
+    object-fit: contain;
+}
+
+.main-form {
+    flex-basis: 32%;
+    background: #FFFFFF;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 2px;
+    padding: 24px 57px 20px;
+    align-items: center;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    margin-top: 15px;
+}
+
+.form-title {
+    margin: 0 0 12px 0;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 28px;
+    line-height: 32px;
+    letter-spacing: -0.01em;
+    color: #333333;
+}
+
+.form-special {
+    margin-bottom: 80px;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 22px;
+    line-height: 110%;
+    letter-spacing: -0.01em;
+    color: #FF2C2C;
+}
+
+.form-special span {
+    font-style: normal;
+    font-weight: 800;
+    font-size: 38px;
+    line-height: 42px;
+    margin-top: 4px;
+}
+
+.main-form input,select {
+    border: 1px solid #089C84;
+    box-sizing: border-box;
+    border-radius: 2px;
+    width: 254px;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 116.75%;
+    color: #333333;
+    padding: 15px 19px 16px 19px;
+}
+
+.form-input input{
+    margin-bottom: 12px;
+}
+
+.form-input input:last-child {
+    margin-bottom: 21px;
+}
+
+.main-form input::placeholder {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 116.75%;
+    color: #333333;
+}
+
+.main-form select {
+    appearance: none;
+    background-image: url(img/select.svg);
+    background-repeat: no-repeat;
+    background-position: right 19px center;
+    margin-bottom: 12px;
+}
+
+.main-form button {
+    width: 254px;
+    background: #FF272B;
+    box-shadow: inset 0px -4px 0px rgba(0, 0, 0, 0.25);
+    border-radius: 50px;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 100%;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    padding: 16px 75px 22px 79px;
+    letter-spacing: 1px;
+    margin-bottom: 16px;
+}
+
+.main-form button:hover {
+    cursor: pointer;
+}
+
+.form-condition {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 20px;
+    color: #828282;
+}
+
+@media (max-width: 1068px) {
+    .container {
+        max-width: 900px;
+    }
+
+    .main-info {
+        flex-basis: 55%;
+    }
+
+    .info-title {
+        font-size: 41px;
+        margin-bottom: 40px;
+    }
+
+    .info-list {
+        font-size: 18px;
+    }
+}
+
+
+@media (max-width: 899px) {
+    .container {
+        max-width: 700px;
+    }
+
+    .info-title {
+        font-size: 32px;
+        margin-bottom: 23px;
+        line-height: 55px;
+    }
+
+    .info-list {
+        padding-left: 66px;
+    }
+
+    .info-list:not(:last-child) {
+        margin-bottom: 22px;
+    }
+
+    .info-body img {
+        margin-top: -91px;
+    }
+    
+    .form-special {
+        margin-bottom: 52px;
+    }
+
+    .main-form {
+        padding: 24px 24px 20px;
+    }
+
+    .main-form input, select {
+        width: 230px;
+    }
+
+    .main-form button {
+        width: 230px;
+    }
+}
+
+@media (max-width: 699px) {
+    .container {
+        max-width: 480px;
+        padding: 16px 80px 72px;
+        text-align: center;
+        justify-content: center;
+    }
+
+    .logo {
+        margin-bottom: 16px;
+    }
+
+    .logo::after {
+        left: 6px;
+    }
+
+    .main-wrapper {
+        flex-direction: column;
+    }
+
+    .info-title {
+        font-size: 32px;
+        line-height: 40px;
+        margin-bottom: 32px;
+    }
+
+    .info-lists {
+        margin-bottom: 40px;
+    }
+
+    .info-list {
+        padding-left: 76px;
+        text-align: left;
+        max-width: 300px;
+    }
+
+    .info-body {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .info-body img {
+        margin-top: 0;
+        margin-bottom: 74px;
+    }
+
+    .main-form {
+        margin-top: 0;
+        padding: 24px 33px 20px;
+    }
+
+    .form-title {
+        margin-bottom: 44px;
+    }
+
+    .form-special span {
+        margin-top: 4px;
+        display: block;
+    }
+
+    .form-special {
+        margin-bottom: 65px;
+    }
+
+    .main-form input, select {
+        width: 254px;
+    }
+
+    .main-form button {
+        width: 254px;
+    }
+
+    .form-input input:last-child {
+        margin-bottom: 20px;
+    }
+}
+
+@media (max-width: 469px) {
+    .container {
+        max-width: 320px;
+        padding: 16px 15px 72px;
+    }
+
+    .main-form {
+        padding: 24px 20px 20px;
+    }
+
+    .main-form input, select {
+        width: 240px;
+    }
+
+    .main-form button {
+        width: 240px;
+    }
+}
